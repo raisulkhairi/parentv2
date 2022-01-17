@@ -39,7 +39,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: ShellComponent,
     children: [
       {
