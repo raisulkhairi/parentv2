@@ -1,0 +1,129 @@
+<div class="detail-profil">
+  <h3 style="text-align: center">Detail Profil</h3>
+  <form>
+    <label for="id">Id</label>
+    <input
+      type="text"
+      id="id"
+      name="id"
+      [disabled]="true"
+      value="{{ teacherData._id }}"
+    />
+
+    <label for="fname">First Name</label>
+    <input
+      type="text"
+      id="fname"
+      name="firstname"
+      [disabled]="true"
+      value="{{ teacherData.first_name }}"
+    />
+
+    <label for="lname">Last Name</label>
+    <input
+      type="text"
+      id="lname"
+      name="lastname"
+      [disabled]="true"
+      value="{{ teacherData.last_name }}"
+    />
+
+    <label for="gender">Gender</label>
+    <input
+      type="text"
+      id="gender"
+      name="gender"
+      [disabled]="true"
+      value="{{ teacherData.gender }}"
+    />
+
+    <label for="date_of_birth">Date of Birth</label>
+    <input
+      type="text"
+      id="date_of_birth"
+      name="date_of_birth"
+      [disabled]="true"
+      value="{{ teacherData.date_of_birth }}"
+    />
+
+    <label for="blood_group">Blood Group</label>
+    <input
+      type="text"
+      id="blood_group"
+      name="blood_group"
+      [disabled]="true"
+      value="{{ teacherData.blood_group }}"
+    />
+
+    <label for="religion">Religion</label>
+    <input
+      type="text"
+      id="religion"
+      name="religion"
+      [disabled]="true"
+      value="{{ teacherData.religion }}"
+    />
+
+    <label for="addmission_date">Addmission Date</label>
+    <input
+      type="text"
+      id="addmission_date"
+      name="addmission_date"
+      [disabled]="true"
+      value="{{ teacherData.addmission_date }}"
+    />
+
+    <label for="email">Email</label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      [disabled]="true"
+      value="{{ teacherData.email }}"
+    />
+
+    <label for="address">Address</label>
+    <input
+      type="text"
+      id="address"
+      name="address"
+      [disabled]="true"
+      value="{{ teacherData.address }}"
+    />
+
+    <label for="phone">Phone</label>
+    <input
+      type="text"
+      id="phone"
+      name="phone"
+      [disabled]="true"
+      value="{{ teacherData.phone }}"
+    />
+
+    <label for="short_bio">Short Bio</label>
+    <input
+      type="text"
+      id="short_bio"
+      name="short_bio"
+      [disabled]="true"
+      value="{{ teacherData.short_bio }}"
+    />
+    <label for="image">Image</label>
+    <br />
+    <img style="width: 300px" src="{{ teacherData.image }}" alt="" />
+    <br />
+    <label for="kelas">Home Room Teacher for Class</label>
+    <input
+      type="text"
+      id="kelas"
+      name="kelas"
+      [disabled]="true"
+      value="{{ teacherData.kelas?.class_name }}"
+    />
+
+    <label for="subject">Subject</label>
+    <ul>
+      <li *ngFor="let subj of teacherData.Subject">{{ subj.subject_name }}</li>
+    </ul>
+  </form>
+</div>

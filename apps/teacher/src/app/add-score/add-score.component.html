@@ -1,0 +1,76 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="square-jelly-box"
+  [fullScreen]="true"
+  ><p style="color: white">Loading...</p></ngx-spinner
+>
+
+<!-- <div id="table">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Kelas</th>
+      <th>Nilai</th>
+      <th>Aksi</th>
+    </tr>
+    <tr *ngFor="let student of studentData; let i = index">
+      <td>
+        {{ student.id }}
+      </td>
+      <td>
+        {{ student.name }}
+      </td>
+      <td>
+        {{ infoKelas.class_name }}
+      </td>
+      <td>
+        <input type="text" #nilaiValue placeholder="{{ student.nilai }}" />
+      </td>
+      <td>
+        <button
+          mat-raised-button
+          (click)="changeValue(i, 'nilai', nilaiValue.value)"
+        >
+          Update
+        </button>
+      </td>
+    </tr>
+  </table>
+</div> -->
+
+<table id="table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Kelas</th>
+    <th>Nilai</th>
+    <th>Aksi</th>
+  </tr>
+  <tr *ngFor="let student of studentData; let i = index">
+    <td>
+      {{ student.id }}
+    </td>
+    <td>
+      {{ student.name }}
+    </td>
+    <td>
+      {{ infoKelas.class_name }}
+    </td>
+    <td>
+      <input type="text" #nilaiValue placeholder="{{ student.nilai }}" />
+    </td>
+    <td>
+      <button
+        mat-raised-button
+        (click)="changeValue(i, 'nilai', nilaiValue.value)"
+      >
+        Update
+      </button>
+    </td>
+  </tr>
+</table>
+
+<button mat-raised-button (click)="submit()">Submit</button>

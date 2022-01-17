@@ -1,0 +1,16 @@
+<h3>You are a homeroom teacher for class : {{ namaKelas }}</h3>
+
+<table id="customers">
+  <tr>
+    <th>ID</th>
+    <th>Nama</th>
+    <th>Kelas</th>
+    <th *ngFor="let kel of subjectList">{{ kel }}</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{ student._id }}</td>
+    <td>{{ student.first_name }} {{ student.last_name }}</td>
+    <td>{{ student.kelas.class_name }}</td>
+    <td *ngFor="let score of student.subject">{{ score.score_subject }}</td>
+  </tr>
+</table>
