@@ -17,34 +17,31 @@
       </li>
 
       <li *ngIf="showProfile" style="margin-left: 20px; width: 86.5%">
-        <a routerLink="/detail-profil"
+        <a routerLink="/detail-profile"
           ><mat-icon aria-hidden="false">info</mat-icon>Detail Profile</a
         >
       </li>
 
       <li *ngIf="showProfile" style="margin-left: 20px; width: 86.5%">
-        <a routerLink="/edit-profil"
+        <a routerLink="/edit-profile"
           ><mat-icon aria-hidden="false">edit</mat-icon>Edit Profile</a
         >
       </li>
 
-      <li (click)="showProfile3 = !showProfile3">
-        <a><mat-icon aria-hidden="false">edit</mat-icon>Set Score </a>
+      <li (click)="showProfile2 = !showProfile2">
+        <a><mat-icon aria-hidden="false">info</mat-icon>Score Info </a>
       </li>
-      <div *ngIf="showProfile3">
+      <div *ngIf="showProfile2">
         <li
-          *ngFor="let subject of subject"
-          style="margin-left: 40px; width: 72.5%"
+          *ngFor="let child of parentData.child"
+          style="margin-left: 20px; width: 86.35%"
         >
-          <a (click)="goToLink(subject._id)">{{ subject.subject_name }}</a>
+          <a href="/score-info/{{ child._id }}"
+            ><mat-icon aria-hidden="false">person</mat-icon
+            >{{ child.first_name }}
+          </a>
         </li>
       </div>
-
-      <li>
-        <a routerLink="/home-room-panel"
-          ><mat-icon aria-hidden="false">person</mat-icon>Home Room Panel</a
-        >
-      </li>
 
       <li>
         <a href=""><mat-icon aria-hidden="false">logout</mat-icon>Logout</a>

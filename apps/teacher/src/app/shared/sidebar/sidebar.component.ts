@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Component, OnInit } from '@angular/core';
 import { TeacherService } from '../../services/teacher.service';
-
 @Component({
   selector: 'teacher-sidebar',
   templateUrl: './sidebar.component.html',
@@ -31,5 +30,9 @@ export class SidebarComponent implements OnInit {
         this.subject = res.Subject;
         console.log('HASIL : ', this.subject);
       });
+  }
+
+  goToLink(idSubject: any) {
+    window.location.href = `/add-score/${idSubject}`;
   }
 }

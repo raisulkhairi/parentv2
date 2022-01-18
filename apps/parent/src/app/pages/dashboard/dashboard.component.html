@@ -1,0 +1,6 @@
+<div *ngFor="let data of childData; let i = index">
+  <h1>Jadwal Child {{ i + 1 }}</h1>
+  <h1>Nama : {{ data.first_name }} {{ data.last_name }}</h1>
+  <h1>Kelas : {{ data.kelas.class_name }}</h1>
+  <parent-calendar [parentData]="data._id"></parent-calendar>
+</div>

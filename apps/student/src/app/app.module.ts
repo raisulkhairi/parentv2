@@ -35,7 +35,6 @@ import listPlugin from '@fullcalendar/list';
 import { Routes } from '@angular/router';
 import { ShellComponent } from './shared/shell/shell.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-// import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {

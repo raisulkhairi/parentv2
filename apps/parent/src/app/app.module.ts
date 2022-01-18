@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { ShellComponent } from './shared/shell/shell.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { DashboradComponent } from './pages/dashborad/dashborad.component';
-
+import { RouterModule, Routes } from '@angular/router';
 // Module Angular Material
 import { MaterialModule } from './material/material.module';
+import { ShellComponent } from './shared/shell/shell.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginComponent } from './pages/login/login.component';
+////
+
+import { CommonModule } from '@angular/common';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CalendarComponent } from './calendar/calendar/calendar.component';
-import { InfoComponent } from './calendar/info/info.component';
 
 // Form
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -32,12 +33,12 @@ import listPlugin from '@fullcalendar/list';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // Import library module
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { DetailProfilComponent } from './profil/detail-profil/detail-profil.component';
-import { EditProfilComponent } from './profil/edit-profil/edit-profil.component';
-import { AddScoreComponent } from './add-score/add-score.component';
-import { HomeRoomPanelComponent } from './home-room-panel/home-room-panel.component';
-// import { LoginComponent } from './login/login.component';
-///
+import { DetailProfileComponent } from './pages/profile/detail-profile/detail-profile.component';
+import { EditProfileComponent } from './pages/profile/edit-profile/edit-profile.component';
+import { CalendarComponent } from './component/calendar/calendar.component';
+import { InfoComponent } from './component/info/info.component';
+import { ScoreInfoComponent } from './pages/score-info/score-info.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -45,23 +46,19 @@ const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        component: DashboradComponent,
+        component: DashboardComponent,
       },
       {
-        path: 'detail-profil',
-        component: DetailProfilComponent,
+        path: 'detail-profile',
+        component: DetailProfileComponent,
       },
       {
-        path: 'edit-profil',
-        component: EditProfilComponent,
+        path: 'edit-profile',
+        component: EditProfileComponent,
       },
       {
-        path: 'add-score/:subjectID',
-        component: AddScoreComponent,
-      },
-      {
-        path: 'home-room-panel',
-        component: HomeRoomPanelComponent,
+        path: 'score-info/:idStudent',
+        component: ScoreInfoComponent,
       },
     ],
   },
@@ -80,13 +77,13 @@ FullCalendarModule.registerPlugins([
     NxWelcomeComponent,
     ShellComponent,
     SidebarComponent,
-    DashboradComponent,
+    DashboardComponent,
+    LoginComponent,
+    DetailProfileComponent,
+    EditProfileComponent,
     CalendarComponent,
     InfoComponent,
-    DetailProfilComponent,
-    EditProfilComponent,
-    AddScoreComponent,
-    HomeRoomPanelComponent,
+    ScoreInfoComponent,
   ],
   imports: [
     CommonModule,

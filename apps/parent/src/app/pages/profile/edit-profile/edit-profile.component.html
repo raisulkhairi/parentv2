@@ -1,0 +1,100 @@
+<div class="detail-profil">
+  <h3 style="text-align: center">Detail Profil</h3>
+  <form [formGroup]="form">
+    <label for="fname">First Name</label>
+    <input
+      formControlName="first_name"
+      type="text"
+      id="fname"
+      name="firs_tname"
+    />
+
+    <label for="lname">Last Name</label>
+    <input
+      formControlName="last_name"
+      type="text"
+      id="lname"
+      name="last_name"
+    />
+
+    <label for="gender">Gender</label>
+    <input formControlName="gender" type="text" id="gender" name="gender" />
+
+    <label for="date_of_birth">Date of Birth</label>
+    <input
+      formControlName="date_of_birth"
+      type="text"
+      id="date_of_birth"
+      name="date_of_birth"
+    />
+    <label for="occupation">Occupation</label>
+    <input
+      formControlName="occupation"
+      type="text"
+      id="occupation"
+      name="occupation"
+    />
+
+    <label for="blood_group">Blood Group</label>
+    <input
+      formControlName="blood_group"
+      type="text"
+      id="blood_group"
+      name="blood_group"
+    />
+
+    <label for="religion">Religion</label>
+    <input
+      formControlName="religion"
+      type="text"
+      id="religion"
+      name="religion"
+    />
+
+    <label for="email">Email</label>
+    <input formControlName="email" type="text" id="email" name="email" />
+
+    <label for="address">Address</label>
+    <input formControlName="address" type="text" id="address" name="address" />
+
+    <label for="phone">Phone</label>
+    <input formControlName="phone" type="text" id="phone" name="phone" />
+
+    <label for="password">Password</label>
+    <input
+      formControlName="password"
+      type="password"
+      id="password"
+      name="password"
+    />
+  </form>
+  <br />
+  <input type="submit" (click)="editParent()" value="Edit Parent Data" />
+</div>
+
+<div>
+  <label>Image</label>
+  <br />
+  <br />
+  <img
+    [src]="imageDisplay ? imageDisplay : imageParent"
+    alt=""
+    style="width: 200px"
+  />
+</div>
+
+<form [formGroup]="formImage">
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Edit Parent Image</label>
+    <br />
+    <br />
+    <input
+      class="form-control"
+      type="file"
+      id="formFile"
+      accept="image/*"
+      (change)="editImage($event)"
+    />
+  </div>
+</form>
+<input type="submit" (click)="submitImage()" value="Update Image" />

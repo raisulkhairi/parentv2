@@ -47,6 +47,7 @@ export class AddScoreComponent implements OnInit {
     private _snackBar: MatSnackBar,
     private spinner: NgxSpinnerService
   ) {}
+
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       params['subjectID'];
