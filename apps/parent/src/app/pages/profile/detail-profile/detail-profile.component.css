@@ -1,31 +1,57 @@
-input[type='text'],
-select {
+/*  */
+.box-name {
+  display: flex;
+  margin-right: 35px;
+}
+
+.box-detail {
+  width: max-content;
+  margin: 10px auto;
+  display: flex;
+  background: #ffff;
+  border-radius: 10px;
+  box-shadow: 4px 4px #bebebe;
+}
+.profil {
+  align-items: center;
+}
+.name-profil {
+  height: max-content;
+  text-align: center;
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  font-size: 35px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-top: 95px;
+  margin-bottom: 100px;
+}
+.photo img {
+ max-width: 235px;
+  height: 100%;
+}
+.name1 {
+  width: 155px;
+  margin: 10px 0;
+  color: #313131;
+  letter-spacing: 1px;
+}
+.photo {
+  margin: 35px;
+}
+.edit {
+  float: right;
+  margin: 20px;
+}
+img.photo-profil {
+  clip-path: circle();
+}
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin: 38px;
+  color: #565656;
 }
 
-input[type='submit'] {
-  width: 100%;
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type='submit']:hover {
-  background-color: #45a049;
-}
-
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.bio {
+  padding-bottom: 60px;
 }

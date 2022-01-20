@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Student } from '../../models/student';
 import { StudentService } from '../../services/student.service';
 
 interface gradeInterface {
@@ -18,7 +19,7 @@ export class ScoreInfoComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  studentData: any[] = [];
+  studentData: any[]=[];
   idStudent: any;
   displayedColumns: string[] = ['Subject Name', 'score'];
   grades: gradeInterface[] = [];
@@ -44,10 +45,11 @@ export class ScoreInfoComponent implements OnInit {
           score: parseInt(el.score_subject),
         });
       });
-      console.log(this.grades2);
     });
     setTimeout(() => {
       this.grades = this.grades2;
+      console.log("all Grades",this.grades);
+      
     }, 200);
   }
 }

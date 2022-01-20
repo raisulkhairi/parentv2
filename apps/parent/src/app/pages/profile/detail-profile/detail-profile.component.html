@@ -1,120 +1,70 @@
-<div class="detail-profil">
-  <h3 style="text-align: center">Detail Profil</h3>
-  <form>
-    <label for="image">Image</label>
-    <br />
-    <img style="width: 300px" src="{{ parentData.image }}" alt="" />
-    <br />
-    <label for="id">Id</label>
-    <input
-      type="text"
-      id="id"
-      name="id"
-      [disabled]="true"
-      value="{{ parentData._id }}"
-    />
-
-    <label for="fname">First Name</label>
-    <input
-      type="text"
-      id="fname"
-      name="firstname"
-      [disabled]="true"
-      value="{{ parentData.first_name }}"
-    />
-
-    <label for="lname">Last Name</label>
-    <input
-      type="text"
-      id="lname"
-      name="lastname"
-      [disabled]="true"
-      value="{{ parentData.last_name }}"
-    />
-
-    <label for="gender">Gender</label>
-    <input
-      type="text"
-      id="gender"
-      name="gender"
-      [disabled]="true"
-      value="{{ parentData.gender }}"
-    />
-
-    <label for="date_of_birth">Date of Birth</label>
-    <input
-      type="text"
-      id="date_of_birth"
-      name="date_of_birth"
-      [disabled]="true"
-      value="{{ parentData.date_of_birth }}"
-    />
-    <label for="occupation">Occupation</label>
-    <input
-      type="text"
-      id="occupation"
-      name="occupation"
-      [disabled]="true"
-      value="{{ parentData.occupation }}"
-    />
-
-    <label for="blood_group">Blood Group</label>
-    <input
-      type="text"
-      id="blood_group"
-      name="blood_group"
-      [disabled]="true"
-      value="{{ parentData.blood_group }}"
-    />
-
-    <label for="religion">Religion</label>
-    <input
-      type="text"
-      id="religion"
-      name="religion"
-      [disabled]="true"
-      value="{{ parentData.religion }}"
-    />
-
-    <label for="email">Email</label>
-    <input
-      type="text"
-      id="email"
-      name="email"
-      [disabled]="true"
-      value="{{ parentData.email }}"
-    />
-
-    <label for="address">Address</label>
-    <input
-      type="text"
-      id="address"
-      name="address"
-      [disabled]="true"
-      value="{{ parentData.address }}"
-    />
-
-    <label for="phone">Phone</label>
-    <input
-      type="text"
-      id="phone"
-      name="phone"
-      [disabled]="true"
-      value="{{ parentData.phone }}"
-    />
-    <label for="status">Status</label>
-    <input
-      type="text"
-      id="status"
-      name="status"
-      [disabled]="true"
-      value="{{ parentData.status }}"
-    />
-    <label for="child">Child</label>
-    <ul>
-      <li *ngFor="let child of parentData.child">
-        {{ child.first_name }} {{ child.last_name }}
-      </li>
-    </ul>
-  </form>
+<div class="container-detail">
+  <div class="title">
+    <p>My Profil</p>
+  </div>
+  <div class="box-detail">
+    <div class="profil">
+      <div class="photo">
+        <img class="photo-profil"  src="{{ parentData.image }}" alt="" />
+      </div>
+    </div>
+    <div class="bio">
+      <div class="edit"><a routerLink="/edit-profile">
+        <button mat-raised-button color="primary">Edit Profil</button>
+      </a>
+      </div>
+      <div class="name-profil" disabled="true">
+        <p>{{ parentData.first_name }}</p>
+      </div>
+      <div class="box-name">
+        <div class="name1">ID :</div>
+        <div class="name2" name="id" disabled="true">{{ parentData._id }}</div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Name</span> :</div>
+        <div class="name2">
+          {{ parentData.first_name }} {{ parentData.last_name }}
+        </div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Gender</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.gender }}</div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Date of Birth</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.date_of_birth }}</div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span> Occupation</span> :</div>
+        <div class="name2" disabled="true">
+          {{ parentData.occupation }}
+        </div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Blood Group</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.blood_group }}</div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Religion</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.religion }}</div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Email</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.email }}</div>
+      </div>
+     
+      <div class="box-name">
+        <div class="name1"><span>Address</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.address }}</div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Phone</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.phone }}</div>
+      </div>
+      <div class="box-name">
+        <div class="name1"><span>Status</span> :</div>
+        <div class="name2" disabled="true">{{ parentData.status }}</div>
+      </div>
+    </div>
+  </div>
 </div>

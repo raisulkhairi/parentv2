@@ -11,3 +11,7 @@
 .example-margin {
   margin: 0 12px;
 }
+button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary {
+  float: right;
+  margin: 20px;
+}

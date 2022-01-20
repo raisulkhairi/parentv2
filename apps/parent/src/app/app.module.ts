@@ -38,12 +38,19 @@ import { EditProfileComponent } from './pages/profile/edit-profile/edit-profile.
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { InfoComponent } from './component/info/info.component';
 import { ScoreInfoComponent } from './pages/score-info/score-info.component';
+import { SidenavComponent } from './component/sidenav/sidenav.component';
+import { DetailStudentComponent } from './pages/detail-student/detail-student.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ShellComponent,
     children: [
+      {
+        path:'',
+        pathMatch:'full',
+        redirectTo:'dashboard'
+      },
       {
         path: 'dashboard',
         component: DashboardComponent,
@@ -59,6 +66,10 @@ const routes: Routes = [
       {
         path: 'score-info/:idStudent',
         component: ScoreInfoComponent,
+      },
+      {
+        path: 'detail-student/:idStudent',
+        component: DetailStudentComponent,
       },
     ],
   },
@@ -84,6 +95,8 @@ FullCalendarModule.registerPlugins([
     CalendarComponent,
     InfoComponent,
     ScoreInfoComponent,
+    SidenavComponent,
+    DetailStudentComponent,
   ],
   imports: [
     CommonModule,

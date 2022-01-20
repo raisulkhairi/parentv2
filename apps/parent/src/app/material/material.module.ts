@@ -38,6 +38,8 @@ import { MatTableModule } from '@angular/material/table';
 
 // Card
 import { MatCardModule } from '@angular/material/card';
+//tool
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 // Array
 const MaterialComponents = [
@@ -54,6 +56,7 @@ const MaterialComponents = [
   MatSnackBarModule,
   MatTableModule,
   MatCardModule,
+  MatToolbarModule,
 ];
 
 @NgModule({

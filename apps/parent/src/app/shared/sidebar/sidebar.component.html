@@ -36,7 +36,7 @@
           *ngFor="let child of parentData.child"
           style="margin-left: 20px; width: 86.35%"
         >
-          <a href="/score-info/{{ child._id }}"
+          <a (click)="goToLink(child._id)"
             ><mat-icon aria-hidden="false">person</mat-icon
             >{{ child.first_name }}
           </a>

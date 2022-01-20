@@ -1,20 +1,23 @@
-<table mat-table [dataSource]="grades" class="mat-elevation-z8">
-  <!-- Item Column -->
-  <ng-container matColumnDef="Subject Name">
-    <th mat-header-cell *matHeaderCellDef>Subject Name</th>
-    <td mat-cell *matCellDef="let gradeData">
-      {{ gradeData['Subject Name'] }}
-    </td>
-  </ng-container>
-
-  <!-- Cost Column -->
-  <ng-container matColumnDef="score">
-    <th mat-header-cell *matHeaderCellDef>Score</th>
-    <td mat-cell *matCellDef="let gradeData">
-      {{ gradeData.score }}
-    </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
+<div class="container">
+  <div class="title-score">
+    <p>Grade Student</p>
+  </div>
+  <div class="wrapper">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of grades; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ data['Subject Name'] }}</td>
+          <td>{{ data.score }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
